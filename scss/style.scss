@@ -1,2 +1,63 @@
+////////////////////////
+// Color definition
+///////////////////////
+$myColor1: #7e5f26;
+$myColor2: #127077;
+$myColor3: #b30000;
+$myTextColor1: #ffde92;
+$myTextColor2: #4ffff3;
+$myTextColor3: #19b89d;
+$myTextColorHover1: #ffe19d;
+$myTextColorHover2: #d5fffc;
+$myTextColorHover3: #19b89d;
+
+// Fonts
+$myFonts: "Yanone Kaffeesatz", sans-serif;
+$myFontsContent: "Roboto", sans-serif;
+////////////////////////
+// Variables modificadas
+///////////////////////
+$primary: $myColor1;
+$secondary: $myColor2;
+$success: $myColor3;
+
 @import "../libs/bootstrap/scss/bootstrap.scss";
 @import "../scss/mixines";
+
+html {
+  font-size: 16px;
+}
+
+.container {
+  height: 100vh;
+}
+
+.row {
+  min-height: 100vh;
+}
+
+// Card style
+.card-body.bg-primary {
+  @include myCard($myTextColor1, 15px 15px 0px 0px);
+}
+
+.card-body.bg-secondary {
+  @include myCard($myTextColor2, 0px 0px 0px 0px);
+}
+
+.card-body.bg-success {
+  @include myCard($myTextColor3, 0px 0px 15px 15px);
+}
+
+// Button style
+.btn-primary {
+  @include myButton($myTextColor1, $myTextColor1, $myTextColorHover1, $myTextColorHover1);
+}
+
+.btn-secondary {
+  @include myButton($myTextColor2, $myTextColor2, $myTextColorHover2, $myTextColorHover2);
+}
+
+.btn-success {
+  @include myButton($myTextColor3, $myTextColor3, $myTextColorHover3, $myTextColorHover3);
+}
