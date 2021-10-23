@@ -11623,4 +11623,10 @@ html {
   border-color: #19b89d;
   color: #19b89d;
 }
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

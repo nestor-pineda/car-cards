@@ -61,3 +61,11 @@ html {
 .btn-success {
   @include myButton($myTextColor3, $myTextColor3, $myTextColorHover3, $myTextColorHover3);
 }
+
+// Media Queries
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
